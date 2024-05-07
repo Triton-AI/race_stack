@@ -13,6 +13,8 @@ docker run --tty \
     --volume $XAUTH_LOC:/home/$USER/.Xauthority \
     --volume /dev:/dev \
     --volume /tmp/.X11-unix:/tmp/.X11-unix \
+    --volume /etc/shadow:/etc/shadow \
+    --gourp-add sudo \
     --volume $RACE_STACK_ROOT:/home/$USER/catkin_ws/src/race_stack \
     --volume $RACE_STACK_ROOT/../../cache/noetic/build:/home/$USER/catkin_ws/build \
     --volume $RACE_STACK_ROOT/../../cache/noetic/devel:/home/$USER/catkin_ws/devel \
